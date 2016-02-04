@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AQO-6J-1dk">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--BergEMS Admin-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="BergEMS_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NCn-Gu-FzV">
+                                <rect key="frame" x="20" y="72" width="560" height="134"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="BWX-lv-11f">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oQa-BV-VrS">
+                                        <rect key="frame" x="0.0" y="38" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga0-CU-c38">
+                                        <rect key="frame" x="0.0" y="76" width="560" height="30"/>
+                                        <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <action selector="handleLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DW2-Po-rcZ"/>
+                                        </connections>
+                                    </button>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Zdf-VO-VaF">
+                                        <rect key="frame" x="0.0" y="114" width="560" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91114267676767668" green="0.91114267676767668" blue="0.91114267676767668" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NCn-Gu-FzV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="PT7-pu-NPY"/>
+                            <constraint firstItem="NCn-Gu-FzV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fm6-tX-NVm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NCn-Gu-FzV" secondAttribute="trailing" id="tG5-El-dP9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="BergEMS Admin" id="PS7-IL-ir7"/>
+                    <connections>
+                        <outlet property="loginButton" destination="ga0-CU-c38" id="JTf-BE-uDK"/>
+                        <outlet property="passwordField" destination="oQa-BV-VrS" id="MSJ-gL-PFz"/>
+                        <outlet property="status" destination="Zdf-VO-VaF" id="zu8-9y-B6v"/>
+                        <outlet property="usernameField" destination="BWX-lv-11f" id="U2s-mR-Sye"/>
+                        <segue destination="JMb-4R-Rqr" kind="showDetail" identifier="PostLogin" id="D7Y-13-rsM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1157" y="601"/>
+        </scene>
+        <!--New Account-->
+        <scene sceneID="xga-CA-Bc4">
+            <objects>
+                <viewController id="XPs-sW-rPU" customClass="NewAccountViewController" customModule="BergEMS_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JaG-Oq-18m"/>
+                        <viewControllerLayoutGuide type="bottom" id="JFr-4I-iHV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gOP-UB-4WW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ye8-ca-zH4">
+                                <rect key="frame" x="20" y="72" width="560" height="106"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MNs-EX-FCa">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tGm-Q6-zdF">
+                                        <rect key="frame" x="0.0" y="38" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c5z-fg-pRW">
+                                        <rect key="frame" x="0.0" y="76" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ye8-ca-zH4" firstAttribute="top" secondItem="JaG-Oq-18m" secondAttribute="bottom" constant="8" symbolic="YES" id="DLx-QI-51C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ye8-ca-zH4" secondAttribute="trailing" id="ORb-OS-eKa"/>
+                            <constraint firstItem="Ye8-ca-zH4" firstAttribute="leading" secondItem="gOP-UB-4WW" secondAttribute="leadingMargin" id="gBE-JA-yyp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Account" id="9NS-eK-w5x">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0mM-5e-EqD">
+                            <connections>
+                                <action selector="cancel:" destination="XPs-sW-rPU" id="lhC-2W-hdQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="v2R-q8-43o">
+                            <connections>
+                                <action selector="saveNewAccount:" destination="XPs-sW-rPU" id="0mX-ag-ULB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailField" destination="tGm-Q6-zdF" id="3gn-Op-U2o"/>
+                        <outlet property="passwordField" destination="c5z-fg-pRW" id="hkD-4v-Odc"/>
+                        <outlet property="usernameField" destination="MNs-EX-FCa" id="97q-k5-hz2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qn8-dU-d3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4004" y="277"/>
+        </scene>
+        <!--Accounts-->
+        <scene sceneID="Zss-f8-pre">
+            <objects>
+                <tableViewController id="yi0-7O-AIi" customClass="AccountTableViewController" customModule="BergEMS_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YEi-4l-akx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AccountCell" id="y3a-of-cGj" customClass="AccountTableViewCell" customModule="BergEMS_Admin" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y3a-of-cGj" id="Tx2-5w-xdw">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyA-lg-GqR">
+                                            <rect key="frame" x="8" y="11" width="559" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="accountNameLabel" destination="tyA-lg-GqR" id="DhW-3y-ydc"/>
+                                    <segue destination="abH-AY-zzJ" kind="show" identifier="AccountDetail" id="DSK-vD-Ohf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yi0-7O-AIi" id="Dd5-2L-Lyd"/>
+                            <outlet property="delegate" destination="yi0-7O-AIi" id="arw-cw-YZM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Accounts" id="K2y-B4-FhO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PjS-gY-kDX">
+                            <connections>
+                                <segue destination="XPs-sW-rPU" kind="show" id="x8w-qG-1TM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="lhK-qj-1rV">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CRQ-os-wZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3207" y="601"/>
+        </scene>
+        <!--username-->
+        <scene sceneID="w7l-Ow-mK1">
+            <objects>
+                <viewController id="abH-AY-zzJ" customClass="AccountDetailViewController" customModule="BergEMS_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Ys-ir-hTW"/>
+                        <viewControllerLayoutGuide type="bottom" id="jaQ-Ki-nJh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E0V-mA-tkV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="5Bu-vG-MAv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="roleCell" textLabel="tiG-AH-Gg1" detailTextLabel="7jG-n1-4WE" style="IBUITableViewCellStyleSubtitle" id="e18-t1-WXl" customClass="RoleTableViewCell" customModule="BergEMS_Admin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="114" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e18-t1-WXl" id="bcq-RL-JHh">
+                                            <rect key="frame" x="0.0" y="0.0" width="561" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tiG-AH-Gg1">
+                                                    <rect key="frame" x="15" y="5" width="46" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7jG-n1-4WE">
+                                                    <rect key="frame" x="15" y="25" width="31" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="7jG-n1-4WE" id="Mbo-Rj-dbn"/>
+                                            <outlet property="nameLabel" destination="tiG-AH-Gg1" id="hYa-JD-7hS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92096748737373735" green="0.92096748737373735" blue="0.92096748737373735" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Bu-vG-MAv" secondAttribute="trailing" constant="-20" id="9SB-kf-5sH"/>
+                            <constraint firstItem="5Bu-vG-MAv" firstAttribute="top" secondItem="E0V-mA-tkV" secondAttribute="top" id="Czd-Xd-JT0"/>
+                            <constraint firstItem="jaQ-Ki-nJh" firstAttribute="top" secondItem="5Bu-vG-MAv" secondAttribute="bottom" id="MWY-P3-T3v"/>
+                            <constraint firstItem="5Bu-vG-MAv" firstAttribute="leading" secondItem="E0V-mA-tkV" secondAttribute="leadingMargin" constant="-20" id="sPu-PW-IpF"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="username" id="8zW-xc-kI7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="jeT-vX-vT2">
+                            <connections>
+                                <action selector="deleteAccount:" destination="abH-AY-zzJ" id="Uro-of-1s5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="deleteButton" destination="jeT-vX-vT2" id="ECF-wy-myc"/>
+                        <outlet property="roleTable" destination="5Bu-vG-MAv" id="dEY-dn-jgb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wgc-Gg-LfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4004" y="951"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9op-VF-TCK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AQO-6J-1dk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fPF-ag-iZR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pah-kz-qe5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kh-og-eP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="277"/>
+        </scene>
+        <!--Post Login Navigation Controller-->
+        <scene sceneID="lje-OI-3SN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JMb-4R-Rqr" customClass="PostLoginNavigationController" customModule="BergEMS_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T3d-cu-R9u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yi0-7O-AIi" kind="relationship" relationship="rootViewController" id="qa3-I9-8Qd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ELX-5X-Jsu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2171" y="517"/>
+        </scene>
+    </scenes>
+</document>

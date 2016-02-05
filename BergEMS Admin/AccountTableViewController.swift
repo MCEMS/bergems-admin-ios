@@ -60,6 +60,10 @@ class AccountTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AccountCell", forIndexPath: indexPath) as! AccountTableViewCell
         cell.accountNameLabel.text = accounts[indexPath.row].username
+        if accounts[indexPath.row].username == APIClient.sharedInstance.username {
+            cell.accountNameLabel.textColor = UIColor.init(red: 0, green: 0.7, blue: 0, alpha: 1)
+            cell.accountNameLabel.text = "\(cell.accountNameLabel.text!) (me)"
+        }
         return cell
     }
     

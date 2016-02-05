@@ -15,7 +15,7 @@ class APIClient {
     var password: String?
     var token: String?
     var tokenExpiration: NSDate?
-    var server = "api2.bergems.org"
+    var server = "api.bergems.org"
     
     static var sharedInstance = APIClient()
     

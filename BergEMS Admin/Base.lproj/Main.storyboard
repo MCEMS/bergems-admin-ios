@@ -112,19 +112,20 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="v2R-q8-43o">
                             <connections>
-                                <action selector="saveNewAccount:" destination="XPs-sW-rPU" id="0mX-ag-ULB"/>
+                                <action selector="save:" destination="XPs-sW-rPU" id="ZLR-Hi-5Iy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailField" destination="tGm-Q6-zdF" id="3gn-Op-U2o"/>
                         <outlet property="passwordField" destination="c5z-fg-pRW" id="hkD-4v-Odc"/>
+                        <outlet property="saveButton" destination="v2R-q8-43o" id="DIf-O2-yNA"/>
                         <outlet property="usernameField" destination="MNs-EX-FCa" id="97q-k5-hz2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qn8-dU-d3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4004" y="277"/>
+            <point key="canvasLocation" x="4816" y="277"/>
         </scene>
         <!--Accounts-->
         <scene sceneID="Zss-f8-pre">
@@ -164,7 +165,7 @@
                     <navigationItem key="navigationItem" title="Accounts" id="K2y-B4-FhO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PjS-gY-kDX">
                             <connections>
-                                <segue destination="XPs-sW-rPU" kind="show" id="x8w-qG-1TM"/>
+                                <segue destination="808-cJ-tzy" kind="presentation" id="x8w-qG-1TM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -284,6 +285,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELX-5X-Jsu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2171" y="517"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4ZU-tW-RUR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="808-cJ-tzy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eLJ-ZL-cqA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XPs-sW-rPU" kind="relationship" relationship="rootViewController" id="pwJ-cI-vNB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YnM-Fk-NNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4004" y="277"/>
         </scene>
     </scenes>
 </document>

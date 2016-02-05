@@ -13,6 +13,7 @@ class NewAccountViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ class NewAccountViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func saveNewAccount(sender: UIBarButtonItem) {
+    func saveAccount() {
         let account = Account()
         account.username = usernameField.text
         account.password = passwordField.text
@@ -43,7 +44,12 @@ class NewAccountViewController: UIViewController {
         }
     }
     
+    @IBAction func save(sender: UIBarButtonItem) {
+        self.saveAccount()
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     @IBAction func cancel(sender: UIBarButtonItem) {
-        navigationController!.popViewControllerAnimated(true)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

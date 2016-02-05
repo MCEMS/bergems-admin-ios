@@ -72,5 +72,4 @@ class AccountTableViewController: UITableViewController {
             }
         } 
     }
-
 }
